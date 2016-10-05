@@ -1,24 +1,11 @@
-# README
+# [Weblog](https://weblog-app.herokuapp.com/) 
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+[Weblog](https://weblog-app.herokuapp.com/) is a personal blogging system.
 
-Things you may want to cover:
 
-* Ruby version
+## Heroku
+[Weblog](https://weblog-app.herokuapp.com/) is live on the [Heroku](https://www.heroku.com/) platform.
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## Version
+* Rails: 5.0.1
+* Ruby: 2.3.0
