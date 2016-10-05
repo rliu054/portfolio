@@ -25,10 +25,10 @@ a {
   padding: 7em 0 0 0;
   border-right: 1px solid #d6dce0;
   #logo {
-    width: 40px;
+    //width: 40px;
     position: absolute;
-    right: 3em;
-    top: 3em;
+    right: 0.5em;
+    top: 0.5em;
   }
   ul {
     list-style: none;
@@ -60,8 +60,10 @@ a {
   .sign_in {
     position: absolute;
     right: 3em;
-    top: 80%;
-    font-size: .8em;
+    bottom: 3em;
+    //top: 80%;
+    font-size: 1em;
+    //color: transparent;
     color: #9eafba;
   }
 }
