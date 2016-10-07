@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Blog</title>
+  <title> Rui Liu</title>
+    <link href="https://fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
     <%= csrf_meta_tags %>
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= stylesheet_link_tag 'application', 'https://fonts.googleapis.com/css?family=Lato:400,700' %>
@@ -9,53 +11,24 @@
   </head>
 
   <body>
-    <div id="sidebar">
-      <div id="logo">
-        <%= link_to root_path do %>
-          <%= image_tag "rui.jpg" %>
-        <% end %>
-      </div>
-
-      <ul>
-        <li class="category">Website</li>
-        <li><%= link_to 'Blog', root_path %></li>
-        <li><%= link_to 'About', about_path %></li>
-      </ul>
-
-      <ul>
-        <li class="category">Social</li>
-        <li><a href="https://twitter.com/rliu054">Twitter</a></li>
-        <li><a href="https://github.com/rliu054">Github</a></li>
-        <li><a href="https://ca.linkedin.com/in/rliu054">LinkedIn</a></li>
-      </ul>
-
-      <% if !user_signed_in? %>
-        <p class="sign_in"><%= link_to 'Log in', new_user_session_path %></p>
-      <% end %>
-    </div>
-
-    <div id="main_content">
-      <div id="header">
-
-        <% if current_page?(root_path) %>
-          <p>All Posts</p>
-        <% elsif current_page?(about_path) %>
-          <p>About</p>
-        <% else %>
-          <%= link_to 'Back to home', root_path %>
-        <% end %>
-
-        <% if user_signed_in? %>
-          <div class="buttons">
-            <button class="button"><%= link_to 'New Post', new_post_path %></button>
-            <button class="button"><%= link_to 'Log out', destroy_user_session_path, :method => :delete %></button>
-          </div>
-        <% end %>
-      </div>
-      <% flash.each do |name, message| %>
-          <%= content_tag(:div, message, class: "alert") %>
-      <% end %>
-      <%= yield %>
-    </div>
+    <header id="main-navigation" class="clearfix">
+      <%= link_to "Rui Liu", root_path, class: "name" %>
+      <nav>
+        <%= link_to "Articles", posts_path %>
+        <a href="">Projects</a>
+        <a href="">Contact</a>
+      </nav>
+    </header>
   </body>
+
+  <%= yield %>
+
+  <footer id="main-footer">
+  <p class="copyright">&copy;2016 Rui Liu</p>
+    <nav>
+      <a href="https://twitter.com/rliu054" target="_blank"><i class="fa fa-twitter"></i></a>
+      <a href="https://github.com/rliu054" target="_blank"><i class="fa fa-github"></i></a>
+    </nav>
+  </footer>
+
 </html>
