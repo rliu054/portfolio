@@ -6,7 +6,7 @@
   </header>
 
   <div id="content">
-    <%= @post.body %>
+    <%= markdown @post.body %>
   </div>
 
   <hr>
@@ -24,37 +24,11 @@
     <a href="#"><i class="fa fa-facebook"></i></a>
   </div>
 
-      <hr>
+  <hr>
 
-
-    </div>
-
-
-
-<div id="post_content">
-  <h1 class="title">
-    <%= @post.title %>
-  </h1>
-  <br>
-
-  <p class="date">
-    Submitted <%= time_ago_in_words(@post.created_at) %> ago
-    <% if user_signed_in? %>
-      | <%= link_to 'Edit', edit_post_path(@post) %>
-      | <%= link_to 'Delete', post_path(@post), method: :delete, data: { confirm: 'Are you sure?'} %>
-    <% end %>
-  </p>
-  <br>
-
-  <p class="body">
-    <%= @post.body %>
-  </p>
-
-  <div id="comments">
-    <h2><%= pluralize(@post.comments.count, 'Comment') %></h2>
-    <%= render @post.comments %>
-
-    <h3>Leave your comment:</h3>
-    <%= render 'comments/form' %>
-  </div>
 </div>
+
+<%= link_to "Edit", edit_post_path(@post) %>
+
+
+
