@@ -1,5 +1,6 @@
 class ProjectsController < ApplicationController
   before_action :find_project, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!, except: [:index, :show]
 
   def index
     @projects = Project.all.order("created_at desc")
@@ -14,7 +15,15 @@ class ProjectsController < ApplicationController
     if @project.save
       redirect_to @project, notice: "Your project was successfully created."
     else
-      render 'new', notice: "Unable to save your project."
+      render 'new'
+    end
+  end
+
+  def update
+    if @project.update(project_params)
+      redirect_to @project, notice: "Your project was successfully updated."
+    else
+      render 'edit'
     end
   end
 
@@ -25,6 +34,8 @@ class ProjectsController < ApplicationController
   end
 
   def destroy
+    @project.destroy
+    redirect_to projects_path
   end
 
 

@@ -17,7 +17,7 @@ class PostsController < ApplicationController
   end
 
   def update
-    if @post.update(params[:post].permit(:title, :body))
+    if @post.update(post_params)
       redirect_to @post, notice: "Your post was successfully updated."
     else
       render 'edit'
@@ -29,7 +29,7 @@ class PostsController < ApplicationController
     if @post.save
       redirect_to @post, notice: "Your post was successfully created."
     else
-      render 'new', notice: "Unable to save your post."
+      render 'new'
     end
   end
 
