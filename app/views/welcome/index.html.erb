@@ -23,9 +23,9 @@
   <div class="col-3 home-page-content">
     <h2>Projects I've built</h2>
     <hr>
-    <h3><a href="#">TODO List App</a></h3>
-    <p class="date">Friday Arpil 10th</p>
-    <h3>Peer to peer search engine</h3>
-    <p class="date">Friday Arpil 10th</p>
+    <% @projects.each do |project| %>
+      <h3><a href=""><%= link_to project.title, project %></a></h3>
+      <p class="date"><%= project.created_at.strftime("%b %d, %Y\t%I:%M%p") %></p>
+    <% end %>
   </div>
 </div>
