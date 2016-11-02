@@ -1,0 +1,21 @@
+// Place all the styles related to the contact controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+@import 'color';
+
+#contact-wrapper {
+  //padding: 3em 0;
+  p {
+    font-size: 1em;
+    text-align: center;
+    color: #0044dd;
+
+    a {
+      text-decoration: none;
+      color: $dark;
+      &:hover {
+        color: $highlight;
+      }
+    }
+  }
+}

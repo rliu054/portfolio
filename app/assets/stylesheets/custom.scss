@@ -94,11 +94,10 @@ hr {
   padding: 2.5em 5%;
   border-bottom: 1px solid $border;
   .name {
-    font-weight: 700;
-    font-size: 1.8em;
-    letter-spacing: 4px;
-    text-transform: uppercase;
-    // border: 2px solid $border;
+    font-weight: 800;
+    font-size: 2em;
+    letter-spacing: 2px;
+    font-family: 'Lato', sans-serif;
     padding: 1rem;
     text-decoration: none;
     color: $dark;
@@ -106,7 +105,7 @@ hr {
   }
   nav {
     float: right;
-    padding-top: 1.4rem;
+    padding-top: 1.5rem;
     a {
       color: $dark;
       text-decoration: none;
