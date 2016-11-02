@@ -9,8 +9,9 @@
     font-size: 1em;
     text-align: center;
     color: #0044dd;
-
+    margin: 3em;
     a {
+      padding: 0 1em;
       text-decoration: none;
       color: $dark;
       &:hover {

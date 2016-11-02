@@ -10,7 +10,7 @@ body {
 }
 
 .wrapper {
-  width: 90%;
+  width: 85%;
   margin: 0 auto;
 }
 
@@ -103,15 +103,23 @@ hr {
     color: $dark;
     float: left;
   }
+  .name:hover {
+    color: $highlight;
+  }
   nav {
     float: right;
     padding-top: 1.5rem;
     a {
+      //font-weight: bold;
       color: $dark;
       text-decoration: none;
       margin: 0 1rem;
       font-size: 1rem;
     }
+    a:hover {
+      color: $highlight;
+    }
+
   }
 }
 
@@ -127,20 +135,8 @@ hr {
   padding: 2.5em 5%;
   border-top: 1px solid $border;
   .copyright {
-    float: left;
-    font-size: .9em;
-    margin: 0;
-  }
-  nav {
     float: right;
-    i {
-      color: $dark;
-      margin-left: 1em;
-      padding-top: .2em;
-      &:hover {
-        color: $highlight;
-      }
-    }
+    font-size: 1em;
   }
 }
 
